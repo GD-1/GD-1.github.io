@@ -1,41 +1,178 @@
-﻿<!doctype html>		
-<html>		
-<head>		
-<meta charset="utf-8">		
-<title>无标题文档</title>		
-<style>		
-*{ padding:0; margin:0;}		
-body{ background:yellow;}		
-li{ list-style:none;}		
-img{ border:none;}		
-a{ text-decoration:none; font-family:微软雅黑;}		
-#div1{ width:1000px; height:150px; position:relative; top:10px; left:0;  }		
-ul{ width:1000px; height:100px;  position:absolute; top:0; left:0; }		
-ul li{ float:left; padding-right:30px; display:inline;  }		
-ul li a{ font-size:20px; color:#666; }		
-ul li a:hover{ color:#333; }		
-#div2{width:1000px; height:300px; position:relative;margin:100px auto;}		
-img{ position:absolute; top:0; left:300px;}		
-		
-</style>		
-</head>		
-		
-<body >		
-<div id="div1">		
-		<ul>		
-       		    <li ><a href="https://github.com/GD-1" target="_blank">Github</a></li>
-                <li ><a href="http://gd-1.github.io/xiaomi.com" target="_blank">小米</a></li>
-                <li ><a href="http://gd-1.github.io/AAA" target="_blank">仿网页</a></li>
-                <li ><a href="http://gd-1.github.io/html5.game.xiaomifeng" target="_blank">小蜜蜂</a></li> 	
-                <li ><a href="http://gd-1.github.io/img.carousel" target="_blank">图片轮播</a></li>	
-                <li><a href="mailto:yuxingzhan@yeah.net" target="_top">email</a></li>		
-                <li><a>151-4316-4334</a></li>		
-        </ul>		
-</div>		
-<div id="div2">		
-		
-		<img src="img/AAA.png" alt="金铅笔"/>		
-	
-</div>		
-</body>		
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+
+
+
+*{ margin:0; padding:0;}
+body{ background:#f2f2f2;}
+a{ text-decoration:none; color:#666;}
+li{ list-style:none;}
+.top{ height:36px; width:100%;     position: fixed;    top: 0;
+    left: 0;background:#ddd; z-index:100;}
+.top1{ height:3px;background:yellow;}
+.top-nav{ width:1060px; margin:0 auto;}
+.top-nav li { float:left; line-height:33px; font-size:12px; font-family:微软雅黑; padding:0 100px;}
+.top-nav li:hover,.top-nav .active{ background:yellow; border-radius:0 0 3px 3px;}
+.top-nav li span{ font-size:6px; text-decoration:line-through; margin-right:3px;}
+
+
+    /*background: url("https://www.apple.com/ac/globalnav/2.0/zh_CN/images/ac-globalnav/globalnav/apple/image_large.svg");*/
+ 
+
+.content{ height:1600px; width:1060px; margin:0 auto;}
+.content-nav{ margin-top:100px; height:300px;}
+
+.content-panel{ width:960px; height:300px; background:#fff; border-radius:10px; margin-bottom:360px;}
+.content-panel .mi{font-family:Arial; font-size:23px; color:#666;padding:60px 0 0 30px;}
+.content-panel .mi h2{font-size:26px; font-weight:normal;margin-bottom:60px;}
+ 
+.aaa{ width:300px; height:200px; background:#fff; float:left; margin-right:30px; position:relative; border-radius:10px;}
+.aaa:hover{ top:-5px; box-shadow:0 15px 30px rgba(0,0,0,0.2); position:relative;}
+p{ line-height:200px; color:#666; font-size:30px; font-family:微软雅黑; text-align:center; 
+text-shadow:0 3px 5px rgba(0,0,0,0.2)}
+
+.layout {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:10;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+
+.dialog {	
+	position:relative;
+	z-index: 10; 
+	width: 1000px;
+	height: 300px;
+	margin:300px auto;
+	background-color:yellow;
+	border-radius:10px;
+}
+.dialog .img{
+	position:relative;
+	width:1000px;
+	height:60px;
+	top:100px;
+}
+
+
+.dialog span {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 12;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	color:green;
+	font-size: 20px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+
+h1 { 
+	font: bold 200% Consolas, Monaco, monospace;
+	border-right: .1em solid;
+	width: 30ch; /* # of chars */
+	white-space: nowrap;
+	overflow: hidden;
+	color:#666;
+	margin:0 60px;
+	animation: typing 20s steps(30, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+
+	-webkit-animation: typing 20s steps(30, end), /* # of steps = # of chars */
+	           blink-caret .5s step-end infinite alternate;
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+	<div class="top1"></div>
+	<div class="top-nav">
+    	<a href="index.html"><li class="active">AAA</li></a>
+        <a href="index-cloud.html" target="_blank"><li>云视频</li></a>
+        <a href="index-book.html" target="_blank"><li>多读书</li></a>
+        <a href="index-1.html" target="_blank"><li>1.0版</li></a>
+    </div>
+
+</div>
+
+<div class="content">
+	<div class="content-nav">
+        <a href="index-cloud.html" target="_blank"><div class="aaa"><p>云视频</p></div></a>
+        <a href="index-book.html" target="_blank"><div class="aaa "><p>多读书</p></div></a>
+        <a href="index-1.html" target="_blank"	><div class="aaa"><p>第一版</p></div></a>
+    </div>
+    <div class="content-panel">
+    	<div class="mi">
+            <h2>if(a=01,b=10) then,</h2>
+            10111,101,1100,11,1111,1101,101,
+    1101,11001,110,10010, 1001,101,1110,100,10011
+        </div>
+        
+    </div>
+    <iframe style="width:1060px; height:600px; border:none;"  scrolling="no"; src="http://yuxingzhan.com/img.carousel/demo6.html"  ></iframe>
+    
+    
+    
+
+
+</div>
+
+
+<!--   -->
+<div class="layout" id="layout">
+    
+    <div class="dialog" id="dialog">
+        <span onClick="close2()">X</span>
+        
+        <div class="img">
+        	<h1>the little prince</h1>
+        </div>
+    </div>
+</div>
+<script>
+
+function close2() {
+	document.getElementById("layout").style.display = "none";
+	document.getElementById("dialog").style.display = "none";
+}
+
+</script>
+
+   
+
+
+
+
+
+
+
+
+
+</body>
 </html>
+
+
+
+
